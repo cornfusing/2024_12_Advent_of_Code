@@ -11,18 +11,18 @@ leftList = list()
 rightList = list()
 sumOfDifs = 0
 
-with open("day_01_1_input.txt","r") as f:
+with open("day_01_input.txt","r") as f:
     lines = f.read().splitlines()
     for line in lines:
         splittedLine = line.split("   ")
-        rightList.append(splittedLine.pop())
-        leftList.append(splittedLine.pop())
+        rightList.append(int(splittedLine.pop()))
+        leftList.append(int(splittedLine.pop()))
 
 leftList.sort()
 rightList.sort()
 
 for i, entry in enumerate(leftList):
-    dif = int(leftList[i]) - int(rightList[i])
+    dif = entry - rightList[i]
     if dif < 0: dif*=-1
     sumOfDifs += dif
     #print(f"Dif: {dif}")
@@ -49,6 +49,6 @@ for leftEntry in leftList:
     for rightEntry in rightList:
         if leftEntry==rightEntry: similarities+=1
     
-    similarityScore += (int(leftEntry)*similarities)
+    similarityScore += (leftEntry*similarities)
 
 print(f"Similarity Score: {similarityScore}")
