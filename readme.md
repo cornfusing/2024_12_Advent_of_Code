@@ -1,0 +1,1 @@
+My attempts on https://adventofcode.com/2024/
