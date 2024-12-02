@@ -1,20 +1,7 @@
-# Advent of Code, Day 02, Riddle 1
+# Advent of Code, Day 02, Riddle 2
 
-# Safe: levels are either all increasing all decreasing
-# Safe: Any two adjacent levels differ by at least one at most three
-
-'''
-Count the safe level-lines.
-Safe conditions:
-* Line is all increasing or all decreasing
-* Levels next to each other within a line differ 1-3 (0 is also unsafe)
-
-Thoughts:
-Make lists
-check increase/decrease
-check differences
-count
-'''
+# Task: if you remove 1 level from the reportlist, will it be safe then?
+# Thoughts: make riddle 1 solution into method, make 2nd method and use 1st solution for each possibility
 
 def readLines(fileName):
     with open(fileName,"r") as f:
